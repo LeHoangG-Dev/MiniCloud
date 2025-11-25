@@ -1,0 +1,16 @@
+options {
+    directory "/var/cache/bind";
+
+    // Listen all IPv4 interfaces inside container
+    listen-on port 53 { any; };
+
+    // Disable IPv6
+    listen-on-v6 { none; };
+
+    // Allow all DNS queries
+    allow-query { any; };
+
+    recursion yes;
+
+    dnssec-validation auto;
+};

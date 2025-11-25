@@ -1,0 +1,15 @@
+$TTL 604800
+@       IN      SOA     ns.cloud.local. admin.cloud.local. (
+                        6         ; Serial
+                        604800    ; Refresh
+                        86400     ; Retry
+                        2419200   ; Expire
+                        604800 )  ; Negative Cache TTL
+;
+@               IN      NS      ns.cloud.local.
+ns              IN      A       10.10.10.10
+
+web-frontend-server     IN      A       10.10.10.10
+app-backend.cloud.local. IN 		A 		10.10.10.20
+minio.cloud.local.       IN			A		10.10.10.30
+keycloak.cloud.local.    IN			A		10.10.10.40
